@@ -1,6 +1,6 @@
 # Strange Compiler
 This project is about a compiler for programming language **Strange**. Strange is a very simple language with finite programming capabilities but suitable for educational purposes.
-...This project contains 
+... This project contains 
 + Strange compiler implemented in C programming language
 + Strange's grammar
 + Example input code on Strange and the output code produced by Strange Compiler
