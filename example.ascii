@@ -1,0 +1,189 @@
+L1: jmp L0
+L110:
+L120: movi R[1],M[12+R[0]]
+outi R[1]
+L130: movi R[1],M[12+R[0]]
+movi R[2], 19
+cmpi R[1],R[2]
+je L150
+jmp  L190
+L150: movi R[1],M[12+R[0]]
+outi R[1]
+L160: movi R[1],M[12+R[0]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[16+R[0]],R[3],
+L170: movi R[1],M[16+R[0]]
+movi M[12+R[0]],R[1],
+jmp  L130
+L190: movi R[1],M[12+R[0]]
+movi R[2], 18
+cmpi R[1],R[2]
+je L210
+jmp  L250
+L210: movi R[1],M[12+R[0]]
+outi R[1]
+L220: movi R[1],M[12+R[0]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[20+R[0]],R[3],
+L230: movi R[1],M[20+R[0]]
+movi M[12+R[0]],R[1],
+jmp  L130
+L250: movi R[1],M[12+R[0]]
+movi R[2], 17
+cmpi R[1],R[2]
+je L270
+jmp  L310
+L270: movi R[1],M[12+R[0]]
+outi R[1]
+L280: movi R[1],M[12+R[0]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[24+R[0]],R[3],
+L290: movi R[1],M[24+R[0]]
+movi M[12+R[0]],R[1],
+jmp  L130
+L310: jmp  M[R[0]]
+L100:
+L320: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 15
+cmpi R[1],R[2]
+je L340
+jmp  L380
+L340: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+outi R[1]
+L350: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[20+R[0]],R[3],
+L360: movi R[1],M[20+R[0]]
+movi R[255],M[12+R[0]]
+movi M[R[255]],R[1],
+jmp  L320
+L380: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 17
+cmpi R[1],R[2]
+je L400
+jmp  L440
+L400: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+outi R[1]
+L410: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[24+R[0]],R[3],
+L420: movi R[1],M[24+R[0]]
+movi R[255],M[12+R[0]]
+movi M[R[255]],R[1],
+jmp  L320
+L440: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 16
+cmpi R[1],R[2]
+je L460
+jmp  L500
+L460: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+outi R[1]
+L470: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+movi R[2], 1
+addi R[3],R[1],R[2]
+movi M[28+R[0]],R[3],
+L480: movi R[1],M[28+R[0]]
+movi R[255],M[12+R[0]]
+movi M[R[255]],R[1],
+jmp  L320
+L500:
+movi R[255],M[12+R[0]]
+movi R[255],M[R[255]]
+movi M[40+R[0]],R[255]
+L510: movi M[32 + R[0]], R[0]
+movi R[255], 28
+addi R[0], R[255], R[0]
+movi R[255], $
+movi R[254], 15
+addi R[255], R[255], R[254]
+movi M[R[0]],  R[255]
+jmp  L110
+movi R[255], 28
+subi R[0], R[0], R[255]
+L520: movi R[255],M[12+R[0]]
+movi R[1],M[R[255]]
+outi R[1]
+L530: jmp  M[R[0]]
+L0:
+L550: movi R[1], 15
+movi M[612],R[1]
+L560: movi R[1], 20
+movi M[616],R[1]
+L570: movi R[1], 35
+movi M[628],R[1]
+L580:
+movi R[255],R[0]
+movi R[254],12
+addi R[255],R[254],R[255]
+movi M[44+R[0]],R[255]
+L590:
+movi R[255],R[0]
+movi R[254],16
+addi R[255],R[254],R[255]
+movi M[48+R[0]],R[255]
+L600: movi M[36 + R[0]], R[0]
+movi R[255], 32
+addi R[0], R[255], R[0]
+movi R[255], $
+movi R[254], 15
+addi R[255], R[255], R[254]
+movi M[R[0]],  R[255]
+jmp  L100
+movi R[255], 32
+subi R[0], R[0], R[255]
+L610: movi R[1],M[612]
+outi R[1]
+L620: movi R[1],M[612]
+movi R[2], 21
+cmpi R[1],R[2]
+je L640
+jmp  L670
+L640: movi R[1],M[612]
+outi R[1]
+movi R[1],M[612]
+movi R[2], 1
+L650: addi R[3],R[1],R[2]
+movi M[664],R[3]
+L660: movi R[1],M[664]
+movi M[612],R[1]
+L670: movi R[1],M[612]
+movi R[2], 20
+cmpi R[1],R[2]
+je L690
+jmp  L720
+L690: movi R[1],M[612]
+outi R[1]
+movi R[1],M[612]
+movi R[2], 1
+L700: addi R[3],R[1],R[2]
+movi M[668],R[3]
+L710: movi R[1],M[668]
+movi M[612],R[1]
+L720: movi R[1],M[612]
+movi R[2], 22
+cmpi R[1],R[2]
+je L740
+jmp  L770
+L740: movi R[1],M[612]
+outi R[1]
+movi R[1],M[612]
+movi R[2], 1
+L750: addi R[3],R[1],R[2]
+movi M[672],R[3]
+L760: movi R[1],M[672]
+movi M[612],R[1]
+L770: halt
